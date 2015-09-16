@@ -1,0 +1,22 @@
+<head>
+  <title>wifi-control-test</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> wifiTest}}
+</body>
+
+<template name="wifiTest">
+  <div>
+    <button data-find-interface>Find Interface</button>
+    <input id="ssid" type="text" value="CIC-A" placeholder="Enter SSID"/>
+    <button data-connect-to-ap>Connect to AP</button>
+    <button data-reset-wifi>Reset WiFi</button>
+    <button data-scan-aps>Scan WiFi</button>
+  </div>
+  <div>
+    {{output}}
+  </div>
+</template>

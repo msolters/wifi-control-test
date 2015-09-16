@@ -1,0 +1,3 @@
+WiFiControl.init({
+  debug: true
+});
