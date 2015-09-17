@@ -16,7 +16,8 @@ Template.wifiTest.events({
   },
   "click button[data-connect-to-ap]": function(event, template) {
     var ssid = template.find("input#ssid").value;
-    Meteor.call( "connectToAP", {ssid: ssid}, function(err, resp) {
+    var pw = template.find("input#password").value;
+    Meteor.call( "connectToAP", {ssid: ssid, password: pw}, function(err, resp) {
       template.output.set( JSON.stringify(resp) );
     });
   },
